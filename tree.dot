@@ -2,12 +2,12 @@ digraph Elden {
   edge [dir = none];
   graph [splines = ortho];
 
-  subgraph Generationstart {
+  subgraph G0 {
     rank = same
     "Unknown " [shape = box]
   }
 
-  subgraph Generation0 {
+  subgraph G1 {
     rank = same
 
     Malekith [shape = box]
@@ -22,7 +22,7 @@ digraph Elden {
   UnknownSon -> Malekith
   "Unknown " -> UnknownSon 
   
-  subgraph Generation0Children {
+  subgraph G2 {
     rank = same
     MarikaPoint [shape = point] 
     Nepheli [shape = box]
@@ -33,7 +33,7 @@ digraph Elden {
   MarikaPoint -> Marika
 
 
-  subgraph Generation1 {
+  subgraph G3 {
     rank = same
     
     Godfrey [shape = box]
@@ -53,7 +53,7 @@ digraph Elden {
 
 
 
-  subgraph Generation1Children {
+  subgraph G4 {
     rank = same
     RykardPoint [shape = point]
     RadahnPoint [shape = point]
@@ -67,7 +67,7 @@ digraph Elden {
   Rennala -> "Unborn Short-lived children"
   GodfreyAndMarika -> GodrickPoint
 
-  subgraph G2 {
+  subgraph G5 {
     rank = same
     Rykard [shape = box]
     Radahn [shape = box]
@@ -86,7 +86,7 @@ digraph Elden {
   GodrickPoint -> MorgottPoint
   MorgottPoint -> MohgPoint
 
-  subgraph G3 {
+  subgraph G6 {
     rank = same
     Godwyn [shape = box]
     Godrick [shape = box]
@@ -104,7 +104,7 @@ digraph Elden {
   MaleniaPoint -> MiquelaPoint
   MiquelaPoint -> MelinaPoint
 
-  subgraph G4 {
+  subgraph G7 {
     rank = same
     Malenia [shape = box]
     Miquela [shape = box]
