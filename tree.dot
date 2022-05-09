@@ -1,4 +1,4 @@
-digraph simpsons {  
+digraph Elden {  
   edge [dir = none];
   graph [splines = ortho];
 
