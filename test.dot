@@ -1,0 +1,120 @@
+digraph simpsons {  
+  edge [dir = none];
+  graph [splines = ortho];
+
+  subgraph Generationstart {
+    rank = same
+    "Unknown " [shape = box]
+  }
+
+  subgraph Generation0 {
+    rank = same
+
+    Malekith [shape = box]
+    UnknownSon [shape = point]
+
+    Unknown [shape = box]
+    "Hoarah Loux" [shape = box]
+    UnknownandHoarah [shape = point]
+    Unknown -> UnknownandHoarah
+    UnknownandHoarah -> "Hoarah Loux"
+  }
+  UnknownSon -> Malekith
+  "Unknown " -> UnknownSon 
+  
+  subgraph Generation0Children {
+    rank = same
+    MarikaPoint [shape = point] 
+    Nepheli [shape = box]
+  }
+  UnknownandHoarah -> Nepheli
+  "Hoarah Loux" -> Godfrey
+  UnknownSon -> MarikaPoint
+  MarikaPoint -> Marika
+
+
+  subgraph Generation1 {
+    rank = same
+    
+    Godfrey [shape = box]
+    GodfreyAndMarika [shape = point]
+    Marika [shape = box]
+    Radagon [shape = box]
+    RadagonAndRennala [shape = point]
+    Rennala [shape = box]
+    RadagonAndMarika [shape = point]
+  }
+  Radagon -> RadagonAndMarika
+  RadagonAndMarika -> Marika
+  Rennala -> RadagonAndRennala
+  RadagonAndRennala -> Radagon
+  Marika -> GodfreyAndMarika
+  GodfreyAndMarika -> Godfrey
+
+
+
+  subgraph Generation1Children {
+    rank = same
+    RykardPoint [shape = point]
+    RadahnPoint [shape = point]
+    RanniPoint [shape = point]
+    UnbornPoint [shape = point]
+  }
+  RadagonAndRennala -> UnbornPoint
+  UnbornPoint -> RykardPoint
+  RykardPoint -> RadahnPoint
+  RadahnPoint -> RanniPoint
+  Rennala -> "Unborn Short-lived children"
+  GodfreyAndMarika -> GodrickPoint
+
+  subgraph G2 {
+    rank = same
+    Rykard [shape = box]
+    Radahn [shape = box]
+    Ranni [shape = box]
+    "Unborn Short-lived children" [shape = box]
+    GodwynPoint [shape = point]
+    GodrickPoint [shape = point]
+    MorgottPoint [shape = point]
+    MohgPoint [shape = point]
+  }
+  RanniPoint -> Ranni
+  UnbornPoint -> "Unborn Short-lived children"
+  RadahnPoint -> Radahn
+  RykardPoint -> Rykard
+  GodwynPoint -> GodrickPoint
+  GodrickPoint -> MorgottPoint
+  MorgottPoint -> MohgPoint
+
+  subgraph G3 {
+    rank = same
+    Godwyn [shape = box]
+    Godrick [shape = box]
+    Morgott [shape = box]
+    Mohg [shape = box]
+    MaleniaPoint [shape = point]
+    MiquelaPoint [shape = point]
+    MelinaPoint [shape = point]
+  }
+  RadagonAndMarika -> MiquelaPoint
+  GodwynPoint -> Godwyn
+  GodrickPoint -> Godrick
+  MorgottPoint -> Morgott
+  MohgPoint -> Mohg
+  MaleniaPoint -> MiquelaPoint
+  MiquelaPoint -> MelinaPoint
+
+  subgraph G4 {
+    rank = same
+    Malenia [shape = box]
+    Miquela [shape = box]
+    Melina [shape = box]
+    Margit [shape = box]
+  }
+  Morgott -> Margit
+  MaleniaPoint -> Malenia
+  MiquelaPoint -> Miquela
+  MelinaPoint -> Melina
+  
+
+}
